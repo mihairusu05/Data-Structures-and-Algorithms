@@ -1,0 +1,21 @@
+#pragma once
+#include "FixedCapBiMap.h"
+class FixedCapBiMapIterator
+{
+	//DO NOT CHANGE THIS PART
+	friend class FixedCapBiMap;
+private:
+	const FixedCapBiMap& map;
+	int currentPosition;
+
+	FixedCapBiMapIterator(FixedCapBiMap& m);
+public:
+	void first();
+	void next();
+	void previous();
+	TElem getCurrent();
+	bool valid() const;
+	/*TElem remove();*/
+};
+
+
